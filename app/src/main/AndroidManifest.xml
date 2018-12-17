@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="info.androidhive.rxandroidexamples">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" >
+
+        </activity>
+        <activity android:name=".basics.Example1Activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".basics.Example2Activity" />
+        <activity android:name=".basics.Example3Activity" />
+        <activity android:name=".basics.Example4Activity" />
+        <activity android:name=".basics.Example5Activity" />
+        <activity android:name=".observers.ObserverActivity"></activity>
+        <activity android:name=".observers.FlowableObserverActivity"></activity>
+        <activity android:name=".observers.SingleObserverActivity"></activity>
+        <activity android:name=".observers.MaybeObserverActivity" />
+        <activity android:name=".observers.CompletableObserverActivity"></activity>
+        <activity android:name=".networking.retrofit.ContactsListActivity" />
+        <activity android:name=".networking.retrofit.ContactsSearchLocalActivity" />
+        <activity android:name=".networking.retrofit.ContactsSearchRemoteActivity" />
+        <activity android:name=".networking.retrofit.ContactsListMultiRemoteActivity" />
+        <activity android:name=".rxbinding.ViewBindingActivity" />
+        <activity android:name=".rxbinding.SpinnerRxBindingActivity" />
+        <activity android:name=".rxbinding.RecyclerViewRxBindingActivity" />
+        <activity android:name=".recyclerview.RecyclerViewPagingActivity" />
+        <activity android:name=".operators.MapOperatorActivity"></activity>
+        <activity android:name=".operators.FlatMapActivity"></activity>
+        <activity android:name=".operators.SwitchMapOperatorActivity"></activity>
+        <activity android:name=".operators.BufferOperatorActivity"></activity>
+        <activity android:name=".operators.ReduceOperatorActivity"></activity>
+        <activity android:name=".operators.ConcatOperatorActivity"></activity>
+        <activity android:name=".operators.ReplayOperatorActivity" />
+        <activity android:name=".operators.RangeOperatorActivity" />
+        <activity android:name=".operators.MergeOperatorActivity">
+
+        </activity>
+        <activity android:name=".operators.ZipOperatorActivity" />
+        <activity android:name=".operators.FilterOperatorActivity" />
+        <activity android:name=".operators.TakeOperatorActivity" />
+        <activity android:name=".operators.JustOperatorActivity" />
+        <activity android:name=".operators.FromOperatorActivity" />
+        <activity android:name=".subjects.PublishSubjectActivity" />
+        <activity android:name=".subjects.ReplaySubjectActivity" />
+        <activity android:name=".subjects.BehaviorSubjectActivity" />
+        <activity android:name=".subjects.AsyncSubjectActivity" />
+        <activity android:name=".operators.GroupByOperatorActivity" />
+        <activity android:name=".operators.SkipOperatorActivity" />
+        <activity android:name=".operators.JoinOperatorActivity" />
+        <activity android:name=".operators.TakeUntilOperatorActivity" />
+        <activity android:name=".operators.SumOperatorActivity" />
+        <activity android:name=".operators.MaxOperatorActivity" />
+        <activity android:name=".operators.MinOperatorActivity" />
+        <activity android:name=".operators.CountOperatorActivity"></activity>
+        <activity android:name=".operators.DebounceOperatorActivity"></activity>
+        <activity android:name=".operators.RepeatOperatorActivity" />
+        <activity android:name=".operators.DistinctOperatorActivity" />
+        <activity android:name=".operators.ConcatMapOperatorActivity"></activity>
+        <activity android:name=".operators.AverageOperatorActivity"></activity>
+    </application>
+
+</manifest>
