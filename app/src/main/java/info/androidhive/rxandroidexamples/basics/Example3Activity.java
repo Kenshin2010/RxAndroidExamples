@@ -39,12 +39,7 @@ public class Example3Activity extends AppCompatActivity {
         animalsObservable
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .filter(new Predicate<String>() {
-                    @Override
-                    public boolean test(String s) throws Exception {
-                        return s.toLowerCase().startsWith("b");
-                    }
-                })
+                .filter(s -> s.toLowerCase().startsWith("b"))
                 .subscribeWith(animalsObserver);
     }
 

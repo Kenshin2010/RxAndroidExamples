@@ -43,12 +43,7 @@ public class Example4Activity extends AppCompatActivity {
                 animalsObservable
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
-                        .filter(new Predicate<String>() {
-                            @Override
-                            public boolean test(String s) throws Exception {
-                                return s.toLowerCase().startsWith("b");
-                            }
-                        })
+                        .filter(s -> s.toLowerCase().startsWith("b"))
                         .subscribeWith(animalsObserver));
 
         /**
@@ -60,18 +55,8 @@ public class Example4Activity extends AppCompatActivity {
                 animalsObservable
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
-                        .filter(new Predicate<String>() {
-                            @Override
-                            public boolean test(String s) throws Exception {
-                                return s.toLowerCase().startsWith("c");
-                            }
-                        })
-                        .map(new Function<String, String>() {
-                            @Override
-                            public String apply(String s) throws Exception {
-                                return s.toUpperCase();
-                            }
-                        })
+                        .filter(s -> s.toLowerCase().startsWith("c"))
+                        .map(s -> s.toUpperCase())
                         .subscribeWith(animalsObserverAllCaps));
     }
 

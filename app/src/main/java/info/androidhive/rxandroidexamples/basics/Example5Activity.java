@@ -45,13 +45,10 @@ public class Example5Activity extends AppCompatActivity {
         disposable.add(getNotesObservable()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .map(new Function<Note, Note>() {
-                    @Override
-                    public Note apply(Note note) throws Exception {
-                        // Making the note to all uppercase
-                        note.setNote(note.getNote().toUpperCase());
-                        return note;
-                    }
+                .map(note -> {
+                    // Making the note to all uppercase
+                    note.setNote(note.getNote().toUpperCase());
+                    return note;
                 })
                 .subscribeWith(getNotesObserver()));
     }
@@ -79,18 +76,15 @@ public class Example5Activity extends AppCompatActivity {
     private Observable<Note> getNotesObservable() {
         final List<Note> notes = prepareNotes();
 
-        return Observable.create(new ObservableOnSubscribe<Note>() {
-            @Override
-            public void subscribe(ObservableEmitter<Note> emitter) throws Exception {
-                for (Note note : notes) {
-                    if (!emitter.isDisposed()) {
-                        emitter.onNext(note);
-                    }
-                }
-
+        return Observable.create(emitter -> {
+            for (Note note : notes) {
                 if (!emitter.isDisposed()) {
-                    emitter.onComplete();
+                    emitter.onNext(note);
                 }
+            }
+
+            if (!emitter.isDisposed()) {
+                emitter.onComplete();
             }
         });
     }
