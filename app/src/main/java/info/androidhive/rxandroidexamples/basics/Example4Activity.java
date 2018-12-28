@@ -21,7 +21,7 @@ public class Example4Activity extends AppCompatActivity {
      * You can see filter() operator is used to filter out the
      * animal names that starts with letter `b`
      */
-    private static final String TAG = Example4Activity.class.getSimpleName();
+    private static final String TAG = "{ " + Example4Activity.class.getSimpleName() + " }";
 
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
 

@@ -31,7 +31,7 @@ public class Example5Activity extends AppCompatActivity {
      * Observable<Note> notesObservable = getNotesObservable();
      * DisposableObserver<Note> notesObserver = getNotesObserver();
      */
-    private static final String TAG = Example5Activity.class.getSimpleName();
+    private static final String TAG = "{ " + Example5Activity.class.getSimpleName() + " }";
 
     private CompositeDisposable disposable = new CompositeDisposable();
 

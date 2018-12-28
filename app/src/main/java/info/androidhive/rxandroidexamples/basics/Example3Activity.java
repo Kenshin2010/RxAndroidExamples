@@ -20,7 +20,7 @@ public class Example3Activity extends AppCompatActivity {
      * You can see filter() operator is used to filter out the
      * animal names that starts with letter `b`
      */
-    private static final String TAG = Example3Activity.class.getSimpleName();
+    private static final String TAG = "{ " + Example3Activity.class.getSimpleName() + " }";
 
     private Disposable disposable;
 

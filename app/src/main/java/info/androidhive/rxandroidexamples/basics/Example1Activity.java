@@ -3,6 +3,8 @@ package info.androidhive.rxandroidexamples.basics;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 
 import info.androidhive.rxandroidexamples.R;
@@ -19,7 +21,7 @@ public class Example1Activity extends AppCompatActivity {
      * Observable emits list of animal names
      */
 
-    private static final String TAG = Example1Activity.class.getSimpleName();
+    private static final String TAG = "{ " + Example1Activity.class.getSimpleName() + " }";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

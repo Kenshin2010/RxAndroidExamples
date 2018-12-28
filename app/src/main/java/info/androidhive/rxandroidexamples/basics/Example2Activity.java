@@ -20,7 +20,7 @@ public class Example2Activity extends AppCompatActivity {
      * Observable emits list of animal names
      * You can see Disposable introduced in this example
      */
-    private static final String TAG = Example2Activity.class.getSimpleName();
+    private static final String TAG = "{ " + Example2Activity.class.getSimpleName() + " }";
 
     private Disposable disposable;
 
